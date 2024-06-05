@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const { ResponseService } = require('./responseService')
+const { ResponseService } = require('./service/ResponseServices')
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
