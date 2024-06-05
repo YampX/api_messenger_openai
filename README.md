@@ -1,8 +1,4 @@
-# Facebook Messenger + ChatGPT Integration
-
-
-## [Tutorial Video](https://youtu.be/0c-RNYb6XiQ)
-🎥 https://youtu.be/0c-RNYb6XiQ  🎥 
+# Facebook Messenger + BOT_ChatGPT Integration
 
 ---
 This repository contains the source code for automating Facebook messenger conversations for business pages through integrating OpenAI's ChatGPT. This integration allows you to leverage the power of ChatGPT to respond to user messages on Facebook Messenger in real-time.
@@ -14,21 +10,22 @@ Before you begin, make sure you have the following installed:
 
 - Node.js and npm
 - Facebook Developer Account and App
-- OpenAI GPT-3 API Key
+- OpenAI API Key
 
 ## Setup
 1. Clone this repository to your local machine:
-> git clone https://github.com/Redando/Facebook-Messenger-ChatGPT-Integration.git
+> git clone https://github.com/YampX/api_messenger_openai.git
 
 2. Install dependencies:
 ```
- cd classical-art-webhook
+ cd api_messenger_openai
  npm install
  ```
-2. Edit credentials in `config.js` (Do not commit personal tokens/keys):
+2. Edit credentials in `.env` (Do not commit personal tokens/keys):
 ```
-accessToken: 'YOUR_FACEBOOK_MESSENGER_ACCESS_TOKEN',
-chatGptKey: 'YOUR_OPEN_AI_API_KEY'
+URL_MESSAGES=https://graph.facebook.com/v17.0/me/messages
+OPENAI_API_KEY=
+TOKEN_MESSENGER=
 ```
 
 ## Usage
@@ -38,8 +35,8 @@ chatGptKey: 'YOUR_OPEN_AI_API_KEY'
 3. Subscribe the app to your Facebook page and obtain the Verify Token.
 
 ### Setting Up ChatGPT
-1. Sign up for the OpenAI GPT-3 API and obtain your API key.
-2. Update config.js with your OpenAI GPT-3 API key.
+1. Sign up for the OpenAI API and obtain your API key.
+2. Update .env with your OpenAI API key.
 
 ### Deploying Webhook
 1. Deploy the webhook to a server or a cloud platform of your choice.
@@ -49,6 +46,3 @@ chatGptKey: 'YOUR_OPEN_AI_API_KEY'
 
 Now, your Facebook Messenger integration with ChatGPT should be set up and ready to respond to user messages.
 
-### Customizations
-
-Feel free to customize the code and responses according to your specific use case. You can modify the carousel items to present alternative elements and update the ChatGPT prompt to get a response appropriate for your conversation. Drop a comment of your use case in the comments of the video! ✌🏽
